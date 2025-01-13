@@ -1,11 +1,115 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// index.astro
 import Layout from '../layouts/Layout.astro';
+import Cintillo from '../components/Cintillo.astro'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const productos = [
+  { nombre: 'Palomitas Mantequilla', precio: 50 },
+  { nombre: 'Churritos Picantes', precio: 30 },
+];
 ---
-
-<Layout>
-	<Welcome />
+<Layout title="Inicio">
+	<Cintillo />
+	<div class="w-[1200px] mx-auto bg-[#FFCD00] h-[75px] rounded-b-[25px] flex items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+		<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1734495540/logo_pingos_e6giox.png" class="w-[157px] ml-[33px] mt-[27px]" alt="">
+		<ul class="flex ml-auto baloo-bhai-2-400 nav-menu">
+			<li class="baloo-bhai-2-400 hover:underline hover:cursor-pointer hover:font-medium">Inicio</li>
+			<li class="ml-[35.51px] hover:underline hover:cursor-pointer">Nosotros</li>
+			<li class="ml-[35.51px] hover:underline hover:cursor-pointer">Productos</li>
+			<li class="ml-[35.51px] hover:underline hover:cursor-pointer">Ubicación</li>
+			<li class="ml-[35.51px] mr-10 hover:underline hover:cursor-pointer">Contacto</li>
+		</ul>
+	</div>
+	<section class="">
+			<div class="flex items-center align-center w-fit mx-auto mt-10 gap-[44px]">
+				<div>
+					<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736485891/Dise%C3%B1o_sin_t%C3%ADtulo_7_1_ehqbzp.png" class="w-[510px] h-[435px]" alt="">
+				</div>
+				<div>
+					<p class="chewy-regular text-[#353132] text-[48px]">¡Explosión de sabor <br>a cada mordida!</p>
+					<p class="w-[464px] text-[24px] text-[#353132] fredoka-400">
+						Sabores únicos, frescura inigualable, 
+						y calidad que salta a la vista. <br>
+						¡Haz de cada momento algo especial 
+						con Los Pingos!
+					</p>
+					<a href="" class="bg-transparent rounded-[50px] border-2 border-[#353132] hover:borde-white text-[24px] mt-[20px] inline-block py-[10px] pl-[70px] pr-[20px] hover:text-white hover:bg-[#353132]">Prueba el sabor ahora</a>
+				</div>
+			</div>
+	</section>
+	<section class="mb-[120px]">
+		<p class="chewy-regular text-[36px] text-center mt-[120px] text-[#353132]">Frituras únicas, frescas <br>y deliciosas</p>
+		<div class="w-fit flex mx-auto gap-20 mt-[40px]">
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736673022/Frame_6_qsjxi2.png" alt="" class="w-[216px]">
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736673021/Frame_5_pquwva.png" alt="" class="w-[216px]">
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736673019/Frame_7_e23qbg.png" alt="" class="w-[216px]">
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736673018/Frame_4_hsdnf7.png" alt="" class="w-[216px]">
+		</div>
+	</section>
+	<section class="mb-[120px]">
+		<div class="bg-[url('https://res.cloudinary.com/db5aa33ix/image/upload/v1736673206/New_Project_1_h7ntgp.png')] h-[422px] w-[1003px] mx-auto flex">
+			<div class="mt-[90px] ml-[65px]">
+				<p class="chewy-regular text-[48px] text-[#353132] mb-[28px] mr-auto">El sabor que nos une</p>
+				<p class="fredoka-400 text-[24px] text-[#353132] w-[567px] mb-[40px]">Creamos botanas pensadas para compartir y disfrutar. Descubre más sobre nuestra misión de llevar sabor a cada momento.</p>
+				<a href="" class="border-[2px] border-[#353132] rounded-[50px] py-[16px] px-[21px] mt-[20px] mr-auto fredoka-400 text-[16px]">Más de nosotros</a>
+			</div>
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736726466/IMG_20191120_122734445_HDR_vq6p2e.jpg" class="ml-auto w-[261px] h-[349px] mt-[40px] mr-[31px] rounded-[25px]" alt="">
+		</div>
+	</section>
+	<section class="bg-[#FFCD00]">
+		<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736733104/wavesOpacity_1_ex7rck.png" class="w-full" alt="">
+		<div class="flex mt-[80px] bg-[#FFCD00] w-[1200px] mx-auto items-center">
+			<div class="h-fit">
+				<p class="chewy-regular text-[48px] text-[#353132]">¡Disfruta Los Pingos donde estés!</p>
+				<p class="fredoka-400 text-[24px] mt-[12px] text-[#353132]">Pide tus botanas favoritas desde la comodidad de tu hogar y recibe el sabor crujiente de Los Pingos en minutos. ¡Es fácil, rápido y delicioso!</p>
+				<ul class="mt-[10px]">
+					<li class="fredoka-400 text-[24px] text-[#353132]">🛵 Entrega rápida y segura hasta tu puerta.</li>
+					<li class="fredoka-400 text-[24px] text-[#353132]">🍿 Botanas siempre frescas y crujientes.</li>
+					<li class="fredoka-400 text-[24px] text-[#353132]">🚀 Envíos express directo a tu hogar.</li>
+				</ul>
+				<a href="" class="border-[2px] border-[#353132] rounded-[50px] py-[16px] px-[21px] mt-[24px] inline-block mr-auto fredoka-400">¡Ordena ahora!</a>
+			</div>
+			<img src="https://res.cloudinary.com/db5aa33ix/image/upload/v1736734558/DALL_E_2025-01-12_20.12.39_-_A_high-quality_1_1_image_featuring_a_red_and_white_striped_box_filled_with_fluffy_popcorn_placed_on_top_of_a_delivery_backpack_in_the_foreground._In_t_hpgi9r.webp" class="w-[400px] rounded-full border-[2px] border-[#353132]" alt="">
+		</div>
+	</section>
+	<section class="bg-[#FFCD00]">
+		<div class="max-w-6xl mx-auto px-4 pt-[80px] pb-[80px]">
+			<h2 class="text-[48px] font-bold text-center text-gray-800 mb-8 chewy-regular">🏪 Nuestras Sucursales</h2>
+		
+			<div class="grid md:grid-cols-2 gap-8">
+			  <!-- Sucursal 1 -->
+			  <div class="bg-white shadow-lg rounded-lg p-6">
+				<h3 class="text-2xl font-bold text-red-500 mb-4 chewy-regular">Sucursal Apatlaco</h3>
+				<p class="flex items-center text-gray-600 mb-2">
+					📍 <span class="ml-2 fredoka-400">Av. Santa María No. 37-A Col, Magdalena Atlazolpa, 09410<br>Ciudad de México, CDMX</span>
+				  </p>
+				  <p class="text-gray-700 font-semibold mb-2 fredoka-40">🕒 Horarios:</p>
+				  <ul class="text-gray-600 fredoka-400">
+					<li>Lunes - Viernes: 10:00 AM - 7:00 PM</li>
+					<li>Sábado: 11:00 AM - 5:00 PM</li>
+					<li>Domingo: Cerrado</li>
+				  </ul>
+			  </div>
+		
+			  <!-- Sucursal 2 -->
+			  <div class="bg-white shadow-lg rounded-lg p-6">
+				<h3 class="text-2xl font-bold text-green-500 mb-4 chewy-regular">Sucursal Ecatepec</h3>
+				<p class="flex items-center text-gray-600 mb-2">
+				  📍 <span class="ml-2 fredoka-400">Cegor M-76 L14 Col, El Cegor, 55130<br>Ecatepec de Morelos, Méx.</span>
+				</p>
+				<p class="text-gray-700 font-semibold mb-2 fredoka-40">🕒 Horarios:</p>
+				<ul class="text-gray-600 fredoka-400">
+				  <li>Lunes - Viernes: 10:00 AM - 7:00 PM</li>
+				  <li>Sábado: 11:00 AM - 5:00 PM</li>
+				  <li>Domingo: Cerrado</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+	</section>
+	<section class="bg-[#FFCD00]">
+		<div class="bg-[#353132] h-[75px] w-[800px] mx-auto rounded-t-[25px] flex items-center justify-center">
+			<p class="fredoka-400 text-white text-center">2025 Los Pingos People Corn </p>
+		</div>
+	</section>
 </Layout>

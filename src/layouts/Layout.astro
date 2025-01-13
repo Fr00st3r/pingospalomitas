@@ -1,22 +1,18 @@
-<!doctype html>
-<html lang="en">
+---
+// Layout.astro
+const { title } = Astro.props;
+---
+<html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{ title }</title>
+		<link rel="stylesheet" href="/src/styles/main.css" />		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Chewy&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<slot />
-	</body>
+  <body>
+      <slot />
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
